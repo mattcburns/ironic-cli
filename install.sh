@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-IMAGE_NAME="ironic-tools:latest"
+IMAGE_NAME="${IRONIC_IMAGE:-ghcr.io/mattcburns/ironic-cli:latest}"
 BIN_DIR="$HOME/.local/bin"
 COMMAND_NAME="ironic"
 

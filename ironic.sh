@@ -3,7 +3,7 @@
 # Wrapper script for running openstack baremetal commands in docker.
 # It automatically passes OS_* environment variables and mounts clouds.yaml.
 
-IMAGE_NAME="ironic-tools:latest"
+IMAGE_NAME="${IRONIC_IMAGE:-ghcr.io/mattcburns/ironic-cli:latest}"
 
 # Check if image exists, tell user to run install if not
 if ! docker image inspect "$IMAGE_NAME" >/dev/null 2>&1; then

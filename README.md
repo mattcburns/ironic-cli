@@ -20,7 +20,7 @@ chmod +x install.sh ironic.sh uninstall.sh
 *(Ensure `~/.local/bin` is in your `$PATH`)*
 
 ### Using GitHub Container Registry (GHCR)
-A GitHub Actions workflow is included to build and publish this image to `ghcr.io/mattcburns/ironic-cli:latest`. If you prefer to pull the pre-built image instead of building it locally, the `install.sh` and `ironic` wrapper scripts will default to the GHCR image. You can override the image name via the `IRONIC_IMAGE` environment variable.
+A GitHub Actions workflow is included to build and publish a multi-architecture image (`linux/amd64` and `linux/arm64`) to `ghcr.io/mattcburns/ironic-cli:latest`. If you prefer to pull the pre-built image instead of building it locally, the `install.sh` and `ironic` wrapper scripts will default to the GHCR image. You can override the image name via the `IRONIC_IMAGE` environment variable. Docker will pull the matching architecture automatically.
 
 ## Usage
 
